@@ -34,7 +34,7 @@ def main(filename):
 
     #Finally converts the first 10 bytes to base32.
     #Substring of 20 in hex means substring of 10 in bin
-    print base64.b32encode(sha1Str[:10])
+    print base64.b32encode(sha1Str[:10]).lower() + ".onion"
 
 
 main(filename)
