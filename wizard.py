@@ -1,14 +1,16 @@
 #!/usr/bin/python
 
-import sys
-import base64
-import sha
-import binascii
+import sys      # Modulo encarregado para interagir com variaveis e funcoes relacionadas com o interprete
+import base64   # Codificacao em base64 de cadenas binarias arbitrarias a cadenas de texto
+import sha      # para implementacao da biblioteca sha-1
+import binascii # Trocas entre binarios e ASCII
 
+# Verifica que sejam chamadas dois arquivos
 if len(sys.argv) != 2:
     print "usage: %s <public key pem file>"
     exit()
 
+# segundo arquivo e armazenado em filename
 filename = sys.argv[1]
 
 def main(filename):
